@@ -1,0 +1,38 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="forms" type="text/css" href="forms.css">
+    </head>
+    <body>
+        <form>
+            <label> User name* </label>
+            <input type="text" name="username" field="required"><br>
+            <label> Email* </label>
+            <input type="text" name="email" id="email" field="required"><br>
+            <label> Country </label>
+            <select name="country" id="country">
+                <option value="India">India</option>
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="Turkey">Turkey</option>
+            </select><br>
+            <label>Country Code:</label>
+            <input type="text" name="country code" ><br>
+            <label>Password</label>
+            <input type="text" name="password"><br>
+            <label>Personal Information</label>
+            <fieldset for="info">
+                <legend>My Personal info.</legend>
+                <label for="dob">Date of Birth:</label>
+                <input type=date for="dob"><br>
+                <label for> Spouse Name</label>
+                <input type="text" for="spouse"><br>
+            </fieldset><br>
+            <label>Remarks</label>
+            <textarea name"remarks" id="remark" row="60" cols="30">please enter your additional remarks(if any)></textarea><br>
+          <input type="Submit" value=Submit >
+              </input> 
+        </form>
+    </body>
+</html>

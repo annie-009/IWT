@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Page</title>
+<script>
+function checkValidation(){
+	var name=document.myForm.Name.value;
+	var email=document.myForm.Email.value;
+	var phone=document.myForm.Phone.value;
+	var Gender=document.getElementByName("gender");
+	if(name==null || name==""){
+		alert("Name cannot be blank.");
+		return false;
+	}
+	if(email==null || email==""){
+		alert("Email cannot be null.");
+		return false;
+	}
+	if(phone==null || phone==""){
+		alert("Phone cannot be null.");
+		return false;
+	}
+	if(Gender[0].checked==true){
+		alert("Your gender is Male.");
+	}else if(Gender[1].checked==true){
+		alert("Your gender is female.")
+	}else{
+		alert("Nothing Selected.");
+		return false;
+	}
+	
+}
+</script>
+<style>
+body{
+margin:0;
+padding:0;
+background-color:#33FFBD;
+font-family:'Arial';
+}
+
+.Registration{
+  width: 382px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 80px;  
+        background: #339FFF;  
+        border-radius: 15px ;
+}
+#Name{
+width:250px;
+height:30px;
+border:none;
+border-radius:3px;
+padding-left:8px;
+}
+#Email{
+width:250px;
+height:30px;
+border:none;
+border-radius:3px;
+padding-left:8px;
+}
+#Phone{
+width:250px;
+height:30px;
+border:none;
+border-radius:3px;
+padding-left:8px;
+}
+label{  
+    color: #08ffd1;  
+    font-size: 17px;  
+}  
+span{  
+    color: white;  
+    font-size: 17px;  
+} 
+#Register{  
+    width: 250px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: blue;  
+}  
+#rg{
+text-align: center;
+color: #277582;  
+    padding: 20px;  
+}
+</style>
+</head>
+<body>
+<div class="Registration">
+<h2 id="rg">Registration Form</h2>
+<form name="myForm" onsubmit="return checkValidation()">
+<label><b>Name:</b></label>
+<input type="text" name="Name" id="Name" placeholder="Enter Name">
+<br><br>
+<label><b>Email:</b></label>
+<input type="email" Name="Email" id="Email" placeholder="Enter Email">
+<br><br>
+<label><b>Phone:</b></label>
+<input type="phone" Name="Phone" id="Phone" placeholder="Enter Phone">
+<br><br>
+<label><b>Gender:</b></label>
+
+<input type="radio" name="gender" value="Male" >
+<span>Male</span>
+<input type="radio" name="gender" value="Female">
+<span>Female</span>
+<br><br>
+<label><b>Enter Address:</b></label>
+<textarea rows = "10" cols = "50" name = "address">
+            Enter Address
+         </textarea>
+         <br><br>
+         <label>Select City:</label>
+<select>
+<option value="cdg">Chandigarh</option>
+<option value="asr">Amritsar</option>
+<option value="juc">Jalandhar City</option>
+<option value="blr">Bengaluru</option>
+<option value="mas">Chennai</option>
+<option value="oth">Any Other</option>
+</select>
+<br><br>
+<label><b>Hobbies:</b></label>
+<input type="checkbox" id="hobby1" name="hobby1" value="Books">
+<span for="hobby1">Reading Books</span>
+<input type="checkbox" id="hobby2" name="hobby2" value="Travel">
+<span for="hobby2">Travel and Explore</span>
+<input type="checkbox" id="hobby3" name="hobby3" value="Other">
+<span for="hobby3">Any Other</span>
+<br><br>
+<input type="checkbox">
+<span>I agree the terms and conditions.</span>
+<br><br>
+<input type="submit" id="Register" value="Register Here">
+<br><br>
+</form>
+</div>
+</body>
+</html>

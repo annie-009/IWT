@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: inline-flex;
+  background-color: aquamarine;
+  flex-direction: row;
+}
+.flex-container > div {
+  background-color: navy;
+  color: yellow;
+  width: 100px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid black;
+}
+.flex-container {
+  display: inline-flex;
+  background-color: aquamarine;
+  flex-direction: row;
+}
+.flex-container > div {
+  background-color: navy;
+  color: yellow;
+  width: 100px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid black
+}
+</style>
+</head>
+<body>
+<div class="flex-container">
+  <div>Flex-grow1</div>
+  <div>Flex-grow2</div>
+  <div>Flex-grow3</div> 
+</div>
+<div class="flex-container">
+  <div>Flex-shrink1</div>
+  <div class="flex-item-left">Flex-shrink2</div>
+  <div class="flex-item-left">Flex-shrink3</div> 
+</div>
+</body>
+</html>
